@@ -1,0 +1,35 @@
+[project]
+name = "sentiment-analysis-dp6"
+version = "0.1.0"
+description = "Desafio Prático: criação de uma API para Análise de Sentimentos e Análise de Reviews de Produtos de um e-commerce."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "chromadb-client>=1.0.12",
+    "fastapi>=0.115.13",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "openai>=1.88.0",
+    "plotly>=6.1.2",
+    "polars>=1.31.0",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.9.1",
+    "python-dotenv>=1.1.0",
+    "sentence-transformers>=4.1.0",
+    "sqlalchemy>=2.0.41",
+    "streamlit>=1.46.0",
+    "torch>=2.7.1",
+    "uvicorn>=0.34.3",
+    "xgboost>=3.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "ruff>=0.12.0",
+    "scikit-learn>=1.7.0",
+]
+
+[tool.ruff]
+line-length = 150
+

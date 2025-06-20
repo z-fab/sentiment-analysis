@@ -161,6 +161,12 @@ Para executar o projeto localmente basta seguir os passos abaixo:
     uv run streamlit run dashboard/app.py
     ```
 
+
+
+https://github.com/user-attachments/assets/7668e521-3f7c-48fd-91ca-d161bdb3af33
+
+
+
 ## 🔮 Próximos Passos e Melhorias
 
 -   **Modelo de Embedding**: Explorar o uso de outros modelos de embedding para melhorar avaliar se existe melhora na performance do modelo de classificação.

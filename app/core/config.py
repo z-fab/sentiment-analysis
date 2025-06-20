@@ -1,6 +1,6 @@
 import pathlib
 
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -8,7 +8,17 @@ class Settings(BaseSettings):
     CHROMA_PORT: str
     COLLECTION: str
     OPENAI_API_KEY: str
+    GEMINI_API_KEY: str
     DB_URL: str
+    API_URL: str
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+        case_sensitive=False,
+        env_prefix="",
+    )
 
 
 CORE_FOLDER = pathlib.Path(__file__).parent

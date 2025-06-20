@@ -82,6 +82,7 @@ class SentimentService:
             logger.debug("Extraindo pontos positivos e negativos com LLM.")
             response = self.openai_client.chat.completions.create(
                 model="gpt-4o-mini",
+                response_format={"type": "json_object"},
                 messages=[
                     {"role": "system", "content": system},
                     {"role": "user", "content": prompt},
@@ -91,7 +92,10 @@ class SentimentService:
             )
             content = response.choices[0].message.content.strip()
             json_response = json.loads(content)
-            return json_response
+            return {
+                "pontos_positivos": json_response.get("pontos_positivos", []),
+                "pontos_negativos": json_response.get("pontos_negativos", []),
+            }
         except Exception:
             logger.exception("Erro ao extrair pontos positivos e negativos com LLM.")
             return {}

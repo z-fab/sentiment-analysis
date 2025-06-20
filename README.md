@@ -133,6 +133,34 @@ O projeto é organizado da seguinte forma:
 └── scripts/            # Scripts de ingestão e refinamento
 ```
 
+Para executar o projeto localmente basta seguir os passos abaixo:
+
+1.  **Instalar Dependências**: Intale as dependências do projeto
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+2.  **Ingestão de Dados**: Execute o script de ingestão para processar os reviews e armazená-los no banco de dados vetorial.
+
+    ```bash
+    python scripts/ingest.py
+    ```
+
+3.  **Treinamento do Modelo**: Execute o notebook `nb2-classification.ipynb` para treinar o modelo de classificação de sentimentos e o script `scripts/refine.py` para refinar os rótulos com o LLM.
+
+4.  **Executar a API**: Inicie a API FastAPI.
+
+    ```bash
+    uv run app/main.py
+    ```
+
+5.  **Executar o Dashboard**: Inicie o dashboard Streamlit.
+
+    ```bash
+    uv run streamlit run dashboard/app.py
+    ```
+
 ## 🔮 Próximos Passos e Melhorias
 
 -   **Modelo de Embedding**: Explorar o uso de outros modelos de embedding para melhorar avaliar se existe melhora na performance do modelo de classificação.

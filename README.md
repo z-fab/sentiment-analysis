@@ -161,11 +161,7 @@ Para executar o projeto localmente basta seguir os passos abaixo:
     uv run streamlit run dashboard/app.py
     ```
 
-
-
 https://github.com/user-attachments/assets/7668e521-3f7c-48fd-91ca-d161bdb3af33
-
-
 
 ## 🔮 Próximos Passos e Melhorias
 
@@ -173,6 +169,6 @@ https://github.com/user-attachments/assets/7668e521-3f7c-48fd-91ca-d161bdb3af33
 
 -   **Aprimoramento do Modelo de Classificação**: Continuar refinando o modelo de classificação, usando outra arquitetura ou técnicas de ensemble, treinar com dados anotados manualmente para avaliar se há melhora na performance, etc.
 
--   **Monitoramento de Modelos**: Monitorar o desempenho do modelo de classificação em produção, detectando _data drift_ ou _concept drift_.
+-   **Monitoramento de Modelos**: Monitorar o desempenho do modelo de classificação em produção, detectando drift de dados e ajustando o modelo conforme necessário.
 
 -   **Melhoria da API**: Adicionar endpoints adicionais para consultas mais específicas, como análises por categoria de produto ou período de tempo.
